@@ -5,6 +5,8 @@
 .dark {
   --bg-colour: #0d0d0d;
   --font-colour: #fff;
+  --border-colour: rgb(26, 34, 51);
+  --glass-texture: rgba(26, 34, 51, 0.6);
 }
 
 .light {
@@ -47,9 +49,11 @@ body {
 }
 
 header {
-  background-color: rgba(26, 34, 51, 0.5);
+  background-color: var(--glass-texture);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+  border-top: 2px solid var(--border-colour);
+  border-right: 2px solid var(--border-colour);
   height: 8vh;
   position: absolute;
   top: 2vh;
@@ -58,14 +62,12 @@ header {
   border-radius: 10vh;
   display: flex;
   padding: 2%;
-  border-top: 2px solid #1a2233;
-  border-right: 2px solid #1a2233;
 }
 header button {
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid #1a2233;
+  border: 1px solid var(--border-colour);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,4 +85,19 @@ header .page-name-container {
 header .page-name-container p {
   font-size: 4rem;
   margin-right: 3rem;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5vh;
+  border-top: 2px solid var(--border-colour);
+  background-color: var(--glass-texture);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
