@@ -27,6 +27,17 @@ body {
   color: var(--font-colour);
 }
 
+p {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+section {
+  padding: 0.5rem;
+}
+
 .bg {
   width: 100%;
   height: 100%;
@@ -54,14 +65,14 @@ header {
           backdrop-filter: blur(2px);
   border-top: 2px solid var(--border-colour);
   border-right: 2px solid var(--border-colour);
-  height: 8vh;
+  border-radius: 4vh;
   position: absolute;
   top: 2vh;
   left: 2vh;
   right: 2vh;
-  border-radius: 10vh;
-  display: flex;
+  height: 8vh;
   padding: 2%;
+  display: flex;
 }
 header button {
   aspect-ratio: 1;
@@ -85,6 +96,40 @@ header .page-name-container {
 header .page-name-container p {
   font-size: 4rem;
   margin-right: 3rem;
+}
+
+.video-container {
+  position: absolute;
+  top: 16vh;
+  left: 2vh;
+  right: 2vh;
+  padding: 2%;
+  background-color: var(--glass-texture);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-top: 2px solid var(--border-colour);
+  border-right: 2px solid var(--border-colour);
+  border-radius: 4vh;
+  display: flex;
+  flex-direction: column;
+}
+.video-container .video-name-container {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.video-container hr {
+  color: var(--border-colour);
+  margin-bottom: 0.5rem;
+}
+.video-container video {
+  border-radius: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
 }
 
 footer {
