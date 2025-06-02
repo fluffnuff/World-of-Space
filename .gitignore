@@ -1,2 +1,8 @@
-style.css.map
-style.scss
+base.css.map
+base.scss
+
+home-content.css.map
+home-content.scss
+
+header-footer.css.map
+header-footer.scss

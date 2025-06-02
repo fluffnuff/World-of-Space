@@ -1,0 +1,46 @@
+header {
+  background-color: var(--glass-texture);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-top: 2px solid var(--border-colour);
+  border-right: 2px solid var(--border-colour);
+  border-radius: 4vh;
+  padding: 2%;
+  margin: 2vh 2vh 0 2vh;
+  display: flex;
+}
+header a button {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--border-colour);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+header a button i {
+  font-size: 2rem;
+  color: var(--font-colour);
+}
+header .page-name-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .page-name-container p {
+  font-size: 4rem;
+  margin-right: 3rem;
+}
+
+footer {
+  height: 5vh;
+  border-top: 2px solid var(--border-colour);
+  background-color: var(--glass-texture);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=header-footer.css.map */
