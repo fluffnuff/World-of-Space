@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="nav-content.css">
 
     <!-- Scripts -->
     <script src="script.js" defer></script>
@@ -27,7 +27,90 @@
 </head>
 
 <body>
+    <main>
+        <div class="nav-page-link-container" id="home-link-nav">
+            <a href="index.html" class="nav-page-link">
+                <div class="nav-page-link-header">
+                    <div class="nav-page-link-icon-container">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="nav-page-link-name-container">
+                        <p class="nav-page-link-name">
+                            Home
+                        </p>
+                    </div>
+                </div>
+                <div class="nav-page-preview"></div>
+            </a>
+        </div>
+        <div class="nav-page-link-container" id="gallery-link-nav">
+            <a href="gallery.html" class="nav-page-link">
+                <div class="nav-page-link-header">
+                    <div class="nav-page-link-icon-container">
+                        <i class="fa-solid fa-images"></i>
+                    </div>
+                    <div class="nav-page-link-name-container">
+                        <p class="nav-page-link-name">
+                            Gallery
+                        </p>
+                    </div>
+                </div>
+                <div class="nav-page-preview"></div>
+            </a>
+        </div>
+        <div class="nav-page-link-container" id="our-history-link-nav">
+            <a href="our-history.html" class="nav-page-link">
+                <div class="nav-page-link-header">
+                    <div class="nav-page-link-icon-container">
+                        <i class="fa-solid fa-earth-oceania"></i>
+                    </div>
+                    <div class="nav-page-link-name-container">
+                        <p class="nav-page-link-name">
+                            Our History
+                        </p>
+                    </div>
+                </div>
+                <div class="nav-page-preview"></div>
+            </a>
+        </div>
+        <div class="nav-page-link-container" id="the-future-link-nav">
+            <a href="the-future.html" class="nav-page-link">
+                <div class="nav-page-link-header">
+                    <div class="nav-page-link-icon-container">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <div class="nav-page-link-name-container">
+                        <p class="nav-page-link-name">
+                            The Future
+                        </p>
+                    </div>
+                </div>
+                <div class="nav-page-preview"></div>
+            </a>
+        </div>
+    </main>
 
+    <script>
+        const navHomeLink = document.getElementById("home-link-nav");
+        navHomeLink.addEventListener('click', function () {
+            window.location.href = "index.html";
+        });
+
+        const navGalleryLink = document.getElementById("gallery-link-nav");
+        navGalleryLink.addEventListener('click', function () {
+            window.location.href = "gallery.html";
+        });
+
+        const navOurHistoryLink = document.getElementById("our-history-link-nav");
+        navOurHistoryLink.addEventListener('click', function () {
+            window.location.href = "our-history.html";
+        });
+
+        const navTheFutureLink = document.getElementById("the-future-link-nav");
+        navTheFutureLink.addEventListener('click', function () {
+            window.location.href = "the-future.html";
+        });
+    </script>
 </body>
 
 </html>

@@ -47,12 +47,29 @@ section {
 
 a {
   text-decoration: none;
-  color: transparent;
-}
-a:visited {
-  color: transparent;
 }
 
+i {
+  color: var(--font-colour);
+}
+
+hr {
+  color: var(--border-colour);
+  margin-bottom: 0.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@keyframes scale-up {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
+}
 header {
   background-color: var(--glass-texture);
   -webkit-backdrop-filter: blur(2px);
@@ -64,14 +81,11 @@ header {
   margin: 2vh 2vh 0 2vh;
   display: flex;
 }
-header a {
-  visibility: none;
-}
 header a button {
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid var(--border-colour);
+  border: 2px solid var(--border-colour);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,8 +125,7 @@ main {
   justify-content: center;
   gap: 2vh;
 }
-
-.pale-blue-dot-section {
+main section {
   padding: 2%;
   background-color: var(--glass-texture);
   -webkit-backdrop-filter: blur(2px);
@@ -123,7 +136,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-.pale-blue-dot-section .pale-blue-dot-name-container {
+
+.pale-blue-dot-name-container,
+.video-name-container {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -131,43 +146,53 @@ main {
   align-items: center;
   width: 100%;
 }
-.pale-blue-dot-section hr {
-  color: var(--border-colour);
-  margin-bottom: 0.5rem;
-}
-.pale-blue-dot-section .pale-blue-dot-image-container img {
+
+.pale-blue-dot-image-container img,
+.video-container video {
   border-radius: 1rem;
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
 }
 
-.video-section {
-  padding: 2%;
-  background-color: var(--glass-texture);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  border-top: 2px solid var(--border-colour);
-  border-right: 2px solid var(--border-colour);
-  border-radius: 4vh;
-  display: flex;
-  flex-direction: column;
-}
-.video-section .video-name-container {
+.discover-section-page-link-container {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
-  justify-content: flex-start;
+  gap: 1rem;
   align-items: center;
-  width: 100%;
+  justify-content: center;
 }
-.video-section hr {
-  color: var(--border-colour);
-  margin-bottom: 0.5rem;
+.discover-section-page-link-container a {
+  flex: 1;
 }
-.video-section .video-container video {
-  border-radius: 1rem;
-  height: -moz-fit-content;
-  height: fit-content;
+.discover-section-page-link-container a button {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+  border-radius: 2vh;
+  background: transparent;
+  background-color: transparent;
+  border: 2px solid var(--border-colour);
+  transition: all 300ms;
+}
+.discover-section-page-link-container a button p {
+  font-size: 2rem;
+  color: var(--font-colour);
+}
+.discover-section-page-link-container a button:hover {
+  scale: 1.1;
+  border-color: white;
+}
+
+@keyframes button-hover {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+    border-color: white;
+  }
 }/*# sourceMappingURL=home-content.css.map */
