@@ -32,6 +32,13 @@ body {
   gap: 1rem;
   -o-border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0));
      border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0));
+  scrollbar-width: 5rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: var(--bg-colour);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: green;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -119,84 +126,4 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-main {
-  margin: 0 2vh 0 2vh;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2vh;
-}
-main section {
-  padding: 2%;
-  background-color: var(--glass-texture);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  border-top: 2px solid var(--border-colour);
-  border-right: 2px solid var(--border-colour);
-  border-radius: 4vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.pale-blue-dot-name-container,
-.video-name-container {
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-}
-
-.pale-blue-dot-image-container img,
-.video-container video {
-  border-radius: 1rem;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-}
-
-.discover-section-page-link-container {
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-.discover-section-page-link-container a {
-  flex: 1;
-}
-.discover-section-page-link-container a button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 7vh;
-  border-radius: 2vh;
-  background: transparent;
-  background-color: transparent;
-  border: 2px solid var(--border-colour);
-  transition: all 300ms;
-}
-.discover-section-page-link-container a button p {
-  font-size: 2rem;
-  color: var(--font-colour);
-}
-.discover-section-page-link-container a button:hover {
-  scale: 1.1;
-  border-color: white;
-}
-
-@keyframes button-hover {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 1.1;
-    border-color: white;
-  }
-}/*# sourceMappingURL=home-content.css.map */
+}/*# sourceMappingURL=the-future-content.css.map */

@@ -95,6 +95,8 @@ main {
           backdrop-filter: blur(2px);
   border-top: 2px solid var(--border-colour);
   border-right: 2px solid var(--border-colour);
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
   border-radius: 4vh;
   transition: all 500ms;
 }
@@ -133,24 +135,13 @@ main {
   font-size: 4rem;
   margin-right: 3rem;
 }
-.nav-page-link-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 2px solid white;
-  opacity: 0;
-  transition: all 500ms;
-}
 .nav-page-link-container:hover {
   flex: 1;
   cursor: pointer;
+  border: 2px solid white;
 }
 .nav-page-link-container:hover .nav-page-preview {
   flex: 1;
   background-color: white;
   border-radius: 4vh;
-}
-.nav-page-link-container:hover::before {
-  opacity: 1;
 }/*# sourceMappingURL=nav-content.css.map */

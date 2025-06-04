@@ -1,11 +1,20 @@
 base.css.map
 base.scss
 
-home-content.css.map
-home-content.scss
-
 header-footer.css.map
 header-footer.scss
 
+home-content.css.map
+home-content.scss
+
 nav-content.css.map
 nav-content.scss
+
+gallery-content.css.map
+gallery-content.scss
+
+our-history-content.css.map
+our-history-content.scss
+
+the-future-content.css.map
+the-future-content.scss

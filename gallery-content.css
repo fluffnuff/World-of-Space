@@ -34,10 +34,6 @@ body {
      border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0));
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: green;
-}
-
 p {
   height: -moz-fit-content;
   height: fit-content;
@@ -121,6 +117,10 @@ footer {
   align-items: center;
 }
 
+hr {
+  margin: 0;
+}
+
 main {
   margin: 0 2vh 0 2vh;
   flex: 1;
@@ -129,7 +129,7 @@ main {
   justify-content: center;
   gap: 2vh;
 }
-main section {
+main .picture-carousel-container {
   padding: 2%;
   background-color: var(--glass-texture);
   -webkit-backdrop-filter: blur(2px);
@@ -141,62 +141,114 @@ main section {
   flex-direction: column;
 }
 
-.pale-blue-dot-name-container,
-.video-name-container {
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-}
-
-.pale-blue-dot-image-container img,
-.video-container video {
-  border-radius: 1rem;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-}
-
-.discover-section-page-link-container {
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
+.picture-carousel {
+  display: grid;
   gap: 1rem;
-  align-items: center;
-  justify-content: center;
+  grid-auto-flow: column;
+  grid-auto-columns: 25%;
+  overflow-x: auto;
+  padding: 1rem 0;
 }
-.discover-section-page-link-container a {
-  flex: 1;
-}
-.discover-section-page-link-container a button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 7vh;
-  border-radius: 2vh;
-  background: transparent;
-  background-color: transparent;
+.picture-carousel div {
+  padding: 0.5rem;
   border: 2px solid var(--border-colour);
+  border-radius: 3vh;
   transition: all 300ms;
 }
-.discover-section-page-link-container a button p {
-  font-size: 2rem;
-  color: var(--font-colour);
+.picture-carousel div img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2vh;
 }
-.discover-section-page-link-container a button:hover {
+.picture-carousel div:hover {
   scale: 1.1;
-  border-color: white;
+  border: 2px solid var(--font-colour);
 }
 
-@keyframes button-hover {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 1.1;
-    border-color: white;
-  }
-}/*# sourceMappingURL=home-content.css.map */
+.blur {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 500ms;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.picture-info-container {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 500ms;
+  position: absolute;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 80vw;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background-color: var(--glass-texture);
+  border: 2px solid var(--border-colour);
+  border-radius: 1rem;
+}
+.picture-info-container .close-button {
+  visibility: inherit;
+  pointer-events: visible;
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  background-color: var(--glass-texture);
+  border: 2px solid var(--border-colour);
+  border-radius: 1rem;
+  transition: all 300ms;
+}
+.picture-info-container .close-button i {
+  font-size: 2rem;
+  filter: brightness(80%);
+}
+.picture-info-container .close-button:hover {
+  scale: 1.1;
+  border: 2px solid var(--font-colour);
+  cursor: pointer;
+}
+.picture-info-container .big-img-container img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.picture-info-container .info-section {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--glass-texture);
+  border: 2px solid var(--border-colour);
+  border-radius: 1rem;
+}
+.picture-info-container .info-section div {
+  height: 100%;
+}
+.picture-info-container .info-section .img-creator-name-container {
+  flex: 1;
+}
+.picture-info-container .info-section .img-date-created-container {
+  width: -moz-fit-content;
+  width: fit-content;
+}/*# sourceMappingURL=gallery-content.css.map */
