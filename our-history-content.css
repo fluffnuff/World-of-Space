@@ -32,17 +32,6 @@ body {
   gap: 1rem;
   -o-border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0));
      border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0));
-  scrollbar-width: 5rem;
-}
-body::-webkit-scrollbar-track {
-  background-color: var(--bg-colour);
-}
-body::-webkit-scrollbar-thumb {
-  background-color: green;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: green;
 }
 
 p {
@@ -126,4 +115,30 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+}
+
+#scene {
+  display: block;
+}
+
+.overlay-label {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--font-colour);
+  font-size: 1.2rem;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
 }/*# sourceMappingURL=our-history-content.css.map */

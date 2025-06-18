@@ -174,7 +174,7 @@ main .picture-carousel-container .picture-carousel-name {
   opacity: 0;
   pointer-events: none;
   transition: all 500ms;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -189,7 +189,7 @@ main .picture-carousel-container .picture-carousel-name {
   visibility: hidden;
   pointer-events: none;
   transition: all 500ms;
-  position: absolute;
+  position: fixed;
   height: -moz-fit-content;
   height: fit-content;
   width: 80vw;
