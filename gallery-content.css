@@ -140,6 +140,9 @@ main .picture-carousel-container {
   display: flex;
   flex-direction: column;
 }
+main .picture-carousel-container .picture-carousel-name {
+  font-size: 1.8rem;
+}
 
 .picture-carousel {
   display: grid;
